@@ -1,0 +1,211 @@
+:root {
+  --bg: #FFF6F0;
+  --surface: #FFFFFF;
+  --primary: #FF8FAB;
+  --primary-dark: #E5708D;
+  --accent: #C8B6FF;
+  --text: #6B4F4F;
+  --text-sub: #B98E96;
+  --border: #F6E3E8;
+  --radius: 18px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* ── Header ── */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  letter-spacing: 0.02em;
+}
+
+header nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+header nav a:hover { color: var(--primary); }
+
+/* ── Hero ── */
+.hero {
+  text-align: center;
+  padding: 72px 24px 56px;
+}
+
+.hero .app-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #FFD9E6 0%, #FF8FAB 60%, #C8B6FF 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(255,143,171,0.35);
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.hero .tagline {
+  font-size: 18px;
+  color: var(--text-sub);
+  margin-bottom: 32px;
+}
+
+/* ── Section ── */
+.section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* ── Feature Grid ── */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.feature-card .icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--text-sub);
+  line-height: 1.65;
+}
+
+/* ── Contact ── */
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+}
+
+.contact-box p {
+  color: var(--text-sub);
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.contact-box a.email-link {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.contact-box a.email-link:hover { background: var(--primary-dark); }
+
+/* ── Prose (privacy / terms) ── */
+.prose h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 36px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose h2:first-child { margin-top: 0; }
+
+.prose p, .prose li {
+  font-size: 15px;
+  color: var(--text-sub);
+  line-height: 1.8;
+}
+
+.prose ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.prose li { margin-bottom: 4px; }
+
+.prose .updated {
+  font-size: 13px;
+  color: #C9AEB4;
+  margin-bottom: 32px;
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 13px;
+  color: #C9AEB4;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+footer a { color: var(--text-sub); text-decoration: none; margin: 0 8px; }
+footer a:hover { color: var(--primary); }
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px; }
+  .hero .tagline { font-size: 16px; }
+  header nav { gap: 12px; }
+}
